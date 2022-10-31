@@ -1,0 +1,8 @@
+db.alunos.deleteOne({nome:"Fulano"})
+db.alunos.deleteMany({ativo: false})
+
+db.alunos.updateOne({nome:"Joel"},{$set:{ativo:false}})
+db.alunos.updateMany({},{$inc:{media:0}})
+
+db.alunos.find({curso:"ADM"})
+db.alunos.find({ativo:true}).count()
